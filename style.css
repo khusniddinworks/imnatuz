@@ -205,6 +205,18 @@ header.scrolled { background: rgba(7, 16, 13, 0.82); backdrop-filter: blur(30px)
 .ls-time { display: block; opacity: 0.5; font-size: 0.6rem; }
 .live-sales-notif.active { transform: translateX(0); opacity: 1; visibility: visible; }
 
+/* --- 12. FAQ ACCORDION --- */
+.faq-accordion { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+.faq-item { background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: 15px; overflow: hidden; transition: 0.3s; }
+.faq-item.active { border-color: var(--gold); background: rgba(255,255,255,0.05); }
+.faq-question { width: 100%; text-align: left; padding: 25px 30px; background: none; border: none; color: var(--ivory); font-family: var(--body); font-weight: 600; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: 0.3s; }
+.faq-question:hover { color: var(--gold); }
+.faq-question i { color: var(--gold); transition: 0.3s; font-size: 1.2rem; }
+.faq-item.active .faq-question i { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s var(--ease-out), padding 0.4s var(--ease-out); }
+.faq-item.active .faq-answer { max-height: 500px; }
+.faq-answer p { padding: 0 30px 30px; opacity: 0.8; line-height: 1.6; font-size: 0.95rem; }
+
 /* --- 8. REVEAL SYSTEM --- */
 .reveal { opacity: 0; transform: translateY(30px); transition: 1s var(--ease-out); }
 .reveal.visible { opacity: 1; transform: translateY(0); }

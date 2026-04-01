@@ -132,6 +132,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- FAQ ACCORDION ---
+    document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const parent = btn.parentElement;
+            const isActive = parent.classList.contains('active');
+            
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle clicked
+            if (!isActive) {
+                parent.classList.add('active');
+            }
+        });
+    });
+
     // --- 6. SMOOTH SCROLL ---
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
