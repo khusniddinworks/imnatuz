@@ -21,6 +21,7 @@
 
 /* --- Global --- */
 * { margin:0; padding:0; box-sizing:border-box; }
+img { max-width: 100%; height: auto; display: block; }
 body { background: var(--green-deep); color: var(--ivory); font-family: var(--body); overflow-x:hidden; -webkit-font-smoothing: antialiased; }
 .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
 .section-padding { padding: 120px 0; }
@@ -196,12 +197,12 @@ header.scrolled { background: rgba(7, 16, 13, 0.82); backdrop-filter: blur(30px)
 .floating-tg:hover { transform: scale(1.05) translateY(-5px); }
 
 /* Live Sales Toast */
-.live-sales-notif { position: fixed; left: -300px; bottom: 100px; z-index: 4500; background: rgba(7, 16, 13, 0.9); border: 1px solid var(--gold); padding: 12px 20px; border-radius: 15px; display: flex; align-items: center; gap: 15px; backdrop-filter: blur(20px); transition: 0.6s cubic-bezier(0.8,0,0.2,1); }
+.live-sales-notif { position: fixed; left: 30px; bottom: 100px; z-index: 4500; background: rgba(7, 16, 13, 0.9); border: 1px solid var(--gold); padding: 12px 20px; border-radius: 15px; display: flex; align-items: center; gap: 15px; backdrop-filter: blur(20px); transition: 0.6s cubic-bezier(0.8,0,0.2,1); transform: translateX(-150%); opacity: 0; visibility: hidden; }
 .live-sales-notif img { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--gold); }
 .ls-text { font-size: 0.72rem; line-height: 1.4; }
 .ls-name { font-weight: 700; color: var(--gold); }
 .ls-time { display: block; opacity: 0.5; font-size: 0.6rem; }
-.live-sales-notif.active { left: 30px; }
+.live-sales-notif.active { transform: translateX(0); opacity: 1; visibility: visible; }
 
 /* --- 8. REVEAL SYSTEM --- */
 .reveal { opacity: 0; transform: translateY(30px); transition: 1s var(--ease-out); }

@@ -283,19 +283,24 @@
     </div>
 
     <style>
-        .welcome-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px; }
-        .welcome-box { background: #0c0f0d; border: 1px solid var(--gold); padding: 40px 30px; border-radius: 15px; max-width: 420px; width: 100%; text-align: center; position: relative; color: var(--ivory); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-        .welcome-close { position: absolute; top: 15px; right: 15px; border: none; background: none; font-size: 1.5rem; color: #888; cursor: pointer; transition: 0.3s; }
+        .welcome-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 15px; }
+        .welcome-box { box-sizing: border-box; background: #0c0f0d; border: 1px solid var(--gold); padding: 35px 20px; border-radius: 15px; max-width: 400px; width: 100%; text-align: center; position: relative; color: var(--ivory); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .welcome-close { position: absolute; top: 12px; right: 15px; border: none; background: none; font-size: 1.5rem; color: #888; cursor: pointer; transition: 0.3s; }
         .welcome-close:hover { color: var(--ivory); }
-        .w-badge { background: var(--gold); color: #0c0f0d; padding: 6px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; display: inline-block; margin-bottom: 20px; }
-        .w-title { font-family: var(--head); font-size: 1.6rem; color: var(--white); margin-bottom: 15px; line-height: 1.3; font-weight: 600; text-transform: uppercase; }
-        .w-desc { margin-bottom: 25px; opacity: 0.9; }
-        .w-desc span { color: var(--gold); font-weight: 700; font-size: 1.1rem; }
-        .w-form { display: flex; flex-direction: column; gap: 15px; }
-        .w-form input { width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--white); font-size: 1rem; outline: none; transition: 0.3s; }
+        .w-badge { background: var(--gold); color: #0c0f0d; padding: 5px 15px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; display: inline-block; margin-bottom: 15px; }
+        .w-title { font-family: var(--head); font-size: 1.4rem; color: var(--white); margin-bottom: 12px; line-height: 1.3; font-weight: 600; text-transform: uppercase; }
+        .w-desc { margin-bottom: 20px; opacity: 0.9; font-size: 0.95rem; }
+        .w-desc span { color: var(--gold); font-weight: 700; font-size: 1.05rem; }
+        .w-form { display: flex; flex-direction: column; gap: 12px; }
+        .w-form input { box-sizing: border-box; width: 100%; padding: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--white); font-size: 1rem; outline: none; transition: 0.3s; }
         .w-form input:focus { border-color: var(--gold); background: rgba(255,255,255,0.1); }
         .w-form input::placeholder { color: rgba(255,255,255,0.4); }
-        .w-form .btn { background: var(--gold); color: #0c0f0d; border: none; padding: 15px; font-weight: 700; border-radius: 8px; font-size: 1rem; }
+        .w-form .btn { box-sizing: border-box; background: var(--gold); color: #0c0f0d; border: none; padding: 14px; font-weight: 700; border-radius: 8px; font-size: 0.95rem; width: 100%; }
+        
+        @media (max-width: 400px) {
+            .w-title { font-size: 1.2rem; }
+            .welcome-box { padding: 30px 15px; }
+        }
     </style>
 
     <script>
